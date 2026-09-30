@@ -1,0 +1,14 @@
+Exercise 7 - MPI Buffered Send with MPI_ANY_SOURCE
+
+Command:
+mpirun --hostfile hosts --prefix /usr/lib64/openmpi -n 4 ./any_source_bsend
+
+Output:
+Just a normal process From rank 0 machine ip-172-31-23-149.ec2.internal
+Sending buffered message to computer 3 from computer 1
+Just a normal process From rank 2 machine ip-172-31-27-173.ec2.internal
+In computer 3 the value of y is 30
+Message received from rank 1
+
+Observation:
+The program successfully uses MPI_Bsend for buffered communication and MPI_ANY_SOURCE for receiving. Rank 1 sends the value 30 to rank 3 using buffered send. Rank 3 accepts the message using MPI_ANY_SOURCE, receives the value 30, and status.MPI_SOURCE confirms that rank 1 was the sender.
