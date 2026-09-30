@@ -1,0 +1,12 @@
+Exercise 0 - MPI In-Class Activities
+
+===== Activity 1: Send computer name and floating point value =====
+Computer 2 received computer name: ip-172-31-27-173.ec2.internal
+Computer 2 received floating point value: 25.50
+Computer 4 sent name ip-172-31-27-173.ec2.internal and value 25.50 to computer 2
+
+===== Activity 2: Calculating numbers up to 1 million =====
+Total is 499997000004
+
+===== Activity 3: Counting to 1 million using rank =====
+Total is 500000500000
