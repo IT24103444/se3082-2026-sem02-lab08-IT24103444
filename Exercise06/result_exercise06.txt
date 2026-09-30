@@ -1,0 +1,18 @@
+Exercise 6 - MPI_ANY_SOURCE
+
+Command:
+mpirun --hostfile hosts --prefix /usr/lib64/openmpi -n 4 ./any_source
+
+Output:
+Just a normal process From rank 0 machine ip-172-31-23-149.ec2.internal
+Sending message to computer 3 from computer 1
+Just a normal process From rank 2 machine ip-172-31-27-173.ec2.internal
+In computer 3 the value of y is 30
+Message received from rank 1
+
+Comparison:
+Original version:
+The receiver specifies rank 1 as the source, so it can only receive the matching message from rank 1.
+
+MPI_ANY_SOURCE version:
+The receiver uses MPI_ANY_SOURCE, so it can accept a matching message from any source rank. In this execution, the message was sent by rank 1, so the received value remained 30. status.MPI_SOURCE confirmed that the actual sender was rank 1.
