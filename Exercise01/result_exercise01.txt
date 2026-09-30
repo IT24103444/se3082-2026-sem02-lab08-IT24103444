@@ -1,0 +1,2 @@
+Just a normal process From rank 1 machine ip-172-31-23-149.ec2.internal
+Hello World! From rank 0 machine ip-172-31-23-149.ec2.internal
