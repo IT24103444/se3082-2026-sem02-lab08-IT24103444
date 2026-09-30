@@ -1,0 +1,12 @@
+Exercise 5 - Source/Destination Mismatch
+
+Command:
+mpirun --hostfile hosts --prefix /usr/lib64/openmpi -n 4 ./source_destination_mismatch
+
+Output:
+Just a normal process From rank 0 machine ip-172-31-23-149.ec2.internal
+SEnding message to computer 3 from computer 1
+Just a normal process From rank 2 machine ip-172-31-27-173.ec2.internal
+
+Observation:
+The program hangs because rank 1 sends synchronously to rank 2, but rank 2 does not receive the message. Rank 3 waits to receive a message from rank 1. Therefore, the send and receive operations do not match and the program does not complete.
