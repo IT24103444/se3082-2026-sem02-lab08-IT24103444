@@ -1,0 +1,4 @@
+Number of processes: 2
+Number of points: 10000000
+Estimated Pi: 3.14151
+Execution time: 0.600249 seconds
